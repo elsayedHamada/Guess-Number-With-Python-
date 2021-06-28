@@ -20,3 +20,19 @@ else:
 run = True
 while run:
     user_input = input(f"Choose Number Between 0 and {high_num} >> ")
+    if user_input.isdigit():
+        user_input = int(user_input)
+        if user_input == number:
+            print("You Are Guineas😉!")
+            again = input("Do You Want To Play Again y/n >> ").lower()
+            if again == "y":
+                continue
+            else:
+                run = False
+        else:
+            if user_input > number:
+                print("You Are Higher Than The Number.")
+            elif user_input < number:
+                print("You Are Lower Than The Number.")
+    else:
+        print("You Should Choose Number Nothing else ok.")
