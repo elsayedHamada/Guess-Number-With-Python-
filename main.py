@@ -2,12 +2,15 @@
 import random
 # Welcome To The Game
 print("Welcome To The Guessing Game✨✨")
-choose_level = input("Choose How The Game Is Going to be (hard(h) - medium(m) - easy(e) >> ").lower()
+choose_level = input("Choose How The Game Is Going to be most-h(mh) hard(h) - medium(m) - easy(e) >> ").lower()
 print("Let's Get Started:)")
 number = 0
 high_num = 0
 
-if choose_level == "h":
+if choose_level == "mh":
+    high_num = 1000
+    number = random.randint(0, high_num)
+elif choose_level == "h":
     high_num = 100
     number = random.randint(0, high_num)
 elif choose_level == "m":
